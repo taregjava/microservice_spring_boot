@@ -1,0 +1,6 @@
+server:
+  port: 9002
+
+client:
+  post:
+    department: http://localhost:9001/department
