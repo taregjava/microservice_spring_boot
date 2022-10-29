@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="login-service" />
         <module name="user-service" />
         <module name="department-service" />
         <module name="api-getway" />
@@ -16,14 +17,16 @@
     <bytecodeTargetLevel>
       <module name="api-getway" target="11" />
       <module name="department-service" target="11" />
+      <module name="login-service" target="17" />
       <module name="service-registry" target="11" />
       <module name="user-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="api-getway" options="-parameters --add-modules java.base" />
-      <module name="department-service" options="-parameters --add-modules java.base" />
+      <module name="api-getway" options="-parameters" />
+      <module name="department-service" options="-parameters" />
+      <module name="login-service" options="-parameters --add-modules java.base" />
       <module name="service-registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

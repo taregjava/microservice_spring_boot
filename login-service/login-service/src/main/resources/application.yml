@@ -1,0 +1,36 @@
+spring:
+  #port: 8083
+ # security:
+  #  user:
+   #   name: tareg
+    #  password: 123456
+
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microserviceapi
+    username: root
+    password:
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+#external-url:
+ # flight-amenities: http://localhost:3000/amenities
+
+server:
+  port: 8083 #set your portg
+  servlet:
+    context-path: /auth
+
+
+
+
+
+
+
+
+
+
+

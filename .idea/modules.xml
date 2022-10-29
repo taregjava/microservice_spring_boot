@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/api-getway/api-getway/api-getway.iml" filepath="$PROJECT_DIR$/api-getway/api-getway/api-getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/department-service/department-service.iml" filepath="$PROJECT_DIR$/department-service/department-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/department-service (1).iml" filepath="$PROJECT_DIR$/.idea/department-service (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/login-service/login-service/login-service.iml" filepath="$PROJECT_DIR$/login-service/login-service/login-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-registry/service-registry/service-registry.iml" filepath="$PROJECT_DIR$/service-registry/service-registry/service-registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
     </modules>
