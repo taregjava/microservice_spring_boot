@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Data
-@Component
+//@Component
 //@Profile("Local")
 public class LocalDataProvider implements CommandLineRunner {
     private final UserAuthRepository userAuthRepository;
