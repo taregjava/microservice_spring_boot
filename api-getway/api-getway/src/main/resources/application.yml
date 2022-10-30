@@ -15,6 +15,10 @@ spring:
           uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/department/**
+        - id: securityModules
+          uri: lb://LOG-IN-SERVER
+          predicates:
+            - Path=/**
 
 
 eureka:
