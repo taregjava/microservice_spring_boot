@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/service-registry/service-registry/pom.xml" />
         <option value="$PROJECT_DIR$/api-getway/api-getway/pom.xml" />
         <option value="$PROJECT_DIR$/login-service/login-service/pom.xml" />
+        <option value="$PROJECT_DIR$/config-service/pom.xml" />
       </list>
     </option>
   </component>

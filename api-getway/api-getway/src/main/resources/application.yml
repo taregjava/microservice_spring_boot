@@ -11,6 +11,12 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
+
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: user-service
+                fallbackuri: forward:/userFallBack
         - id: deparmentModules
           uri: lb://DEPARTMENT-SERVICE
           predicates:
@@ -19,6 +25,11 @@ spring:
           uri: lb://LOG-IN-SERVER
           predicates:
             - Path=/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: department-service
+                fallbackuri: forward:/departmentFallBack
 
 
 eureka:
@@ -29,3 +40,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
