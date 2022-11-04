@@ -3,4 +3,18 @@ server:
 
 client:
   post:
-    department: http://localhost:9001/department
+    department: http://DEPARTMENT-SERVICE/department
+
+
+spring:
+  application:
+    name: user-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

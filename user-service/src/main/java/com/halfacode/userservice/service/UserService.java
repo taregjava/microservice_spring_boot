@@ -15,8 +15,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
- /*   @Autowired
-    private RestTemplate restTemplate;*/
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Autowired
     private DepartmentFeign departmentFeign;
@@ -27,8 +27,9 @@ public class UserService {
     public ResponseTemplateVO getUserWithDepartment(Long userid) {
         ResponseTemplateVO responseTemplateVO = new ResponseTemplateVO();
         User user = userRepository.findByUserId(userid);
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/"+user.getUserId(), Department.class);
       //  Department department = restTemplate.getForObject("http://localhost:9001/department/"+user.getUserId(), Department.class);
-        Department department =departmentFeign.findDepartmentById(user.getUserId());
+       // Department department =departmentFeign.findDepartmentById(user.getUserId());
         responseTemplateVO.setDepartment(department);
         responseTemplateVO.setUser(user);
       //  Department department =  departmentFeign.findByDepartmentId(user.getUserId());
