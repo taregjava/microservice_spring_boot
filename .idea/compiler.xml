@@ -22,7 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="department-service" options="-parameters --add-modules java.base" />
       <module name="service-registry" options="-parameters" />
-      <module name="user-service" options="-parameters --add-modules java.base" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>
