@@ -4,8 +4,9 @@ server:
 spring:
   application:
     name: department-service
-
-
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
 eureka:
   client:
     register-with-eureka: true

@@ -24,10 +24,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="api-getway" options="-parameters --add-modules java.base" />
-      <module name="department-service" options="-parameters" />
-      <module name="login-service" options="-parameters --add-modules java.base" />
-      <module name="service-registry" options="-parameters --add-modules java.base" />
+      <module name="api-getway" options="-parameters" />
+      <module name="department-service" options="-parameters --add-modules java.base" />
+      <module name="login-service" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

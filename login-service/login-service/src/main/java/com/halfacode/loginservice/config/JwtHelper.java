@@ -43,8 +43,30 @@ public class JwtHelper {
         return createToken(claim, userDetails.getUsername());
     }
 
+    /*
+    *  public String createToken(String username, List<AppUserRole> appUserRoles) {
+
+    Claims claims = Jwts.claims().setSubject(username);
+    claims.put("auth", appUserRoles.stream().map(s -> new SimpleGrantedAuthority(s.getAuthority())).filter(Objects::nonNull).collect(Collectors.toList()));
+
+    Date now = new Date();
+    Date validity = new Date(now.getTime() + validityInMilliseconds);
+
+    return Jwts.builder()//
+        .setClaims(claims)//
+        .setIssuedAt(now)//
+        .setExpiration(validity)//
+        .signWith(SignatureAlgorithm.HS256, secretKey)//
+        .compact();
+  }
+    * */
+
     private String createToken(Map<String, Object> claims, String subject) {
-        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+
+        return Jwts.builder()
+                .setClaims(claims)
+                .setSubject(subject)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date((System.currentTimeMillis() + 1000 * 60 * 60 * 10)))
                 .signWith(SignatureAlgorithm.HS256,SECRET_KEY).compact();
     }
@@ -52,4 +74,6 @@ public class JwtHelper {
         final String username= extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
+
+
 }

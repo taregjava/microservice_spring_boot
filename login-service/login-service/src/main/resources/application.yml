@@ -20,7 +20,13 @@ spring:
 
 #external-url:
  # flight-amenities: http://localhost:3000/amenities
-
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: f65ea859f286c26bf84e
+            client-secret: ff21f44e04b2c5f83fd3bb40cc242a28a75734f3
 server:
   port: 8083 #set your portg
  # servlet:

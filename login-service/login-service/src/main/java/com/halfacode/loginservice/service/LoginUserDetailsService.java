@@ -21,4 +21,6 @@ public class LoginUserDetailsService implements UserDetailsService {
         final UserAuth userDb= userAuthRepository.findByUserName(username).orElseThrow(() -> new RuntimeException("User Not found"));
         return new LoginUserDetails(userDb);
     }
+
+
 }
