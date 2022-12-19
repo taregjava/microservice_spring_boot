@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-getway/api-getway/api-getway.iml" filepath="$PROJECT_DIR$/api-getway/api-getway/api-getway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/department-service/department-service.iml" filepath="$PROJECT_DIR$/department-service/department-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/department-service (1).iml" filepath="$PROJECT_DIR$/.idea/department-service (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/login-service/login-service/login-service.iml" filepath="$PROJECT_DIR$/login-service/login-service/login-service.iml" />
